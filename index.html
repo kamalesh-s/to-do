@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body{
+                background: radial-gradient(rgb(47,150,163),rgb(48,62,143));
+                color: white;
+            }
+            h1{
+                text-align: center;
+                font-size: 48px;
+                font-family: Verdana;
+            }
+            .task{
+                margin-left: 20%;
+                font-size: 40px;
+            }
+            #text{
+                width: 80%;
+                height: 70px;
+            }
+            #butt{
+                height: 30px;
+                background-color: dimgrey;
+                font-size: 25px;
+
+            }
+            td,th{
+                padding: 21px;
+            }
+
+        </style>
+    </head>
+    <body background="scratched-background.eps">
+    
+       <h1>TO DO..</h1>
+       <div class="task">
+
+       TASK:<br>
+       <input type="text" id="text" placeholder="Type something...."><br>
+
+      
+       <button id="butt" >Add items</button>
+       <br>
+
+       <table>
+           <tr>
+               <th>TASK</th>
+              
+           </tr>
+           
+           <tr >
+               <td><p id="demo"></p></td>
+               
+           </tr>
+          
+       </table>
+
+       
+    </div>
+
+
+        
+        <script >
+           var addbtn=document.getElementById("butt");
+           var demo=document.getElementById("demo");
+          
+           
+
+           addbtn.addEventListener("click",function(){
+               var para=document.createElement("p");
+               para.innerText=text.value;
+               demo.appendChild(para);
+               text.value="";
+
+               para.addEventListener("click",function(){
+                  para.style.textDecoration="line-through";
+               })
+               para.addEventListener("dblclick",function(){
+                   demo.removeChild(para);
+               })
+        })
+           
+        </script>
+    </body>
+</html>
